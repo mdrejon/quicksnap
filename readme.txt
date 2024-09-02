@@ -15,3 +15,7 @@ Quicksnap is a powerful and versatile search plugin designed to enhance your Wor
 = 1.0.0 - 02/08/2024 =
 
 - Initial stable realese 
+
+= 1.0.1 - 02/09/2024 =
+
+- Review update

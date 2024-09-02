@@ -10,7 +10,7 @@
  * Author URI:  https://github.com/mdrejon/
  * License:     GPLv2 or later
  * License URI: http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
- * Text Domain: Quicksnap
+ * Text Domain: quicksnap
  * Domain Path: /languages
  * Requires at least: 4.9
  * Requires PHP: 5.2.4

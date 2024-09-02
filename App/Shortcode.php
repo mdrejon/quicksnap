@@ -140,7 +140,7 @@ class Shortcode {
 		}
 		
 		$post_id      = isset( $_POST['postId'] ) ? intval( $_POST['postId'] ) : 0;
-		$search_value = isset( $_POST['searchValue'] ) ? sanitize_text_field( $_POST['searchValue'] ) : '';
+		$search_value = isset( $_POST['searchValue'] ) ? sanitize_text_field( wp_unslash($_POST['searchValue']) ) : '';
 
 		if ( $post_id == 0 ) {
 			wp_send_json_error( 'Post ID is required' );

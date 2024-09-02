@@ -105,10 +105,10 @@ class MetaBox {
 
 		$quicksnap_data = ! empty( $_wtdqs_quicksnap_otp ) && is_array( $_wtdqs_quicksnap_otp ) ? $_wtdqs_quicksnap_otp : array();
 
-		$quicksnap_data['post_type']             = isset( $_POST['_wtdqs_quicksnap_otp']['post_type'] ) ? sanitize_text_field( $_POST['_wtdqs_quicksnap_otp']['post_type'] ) : '';
-		$quicksnap_data['maximum_items_display'] = isset( $_POST['_wtdqs_quicksnap_otp']['maximum_items_display'] ) ? sanitize_text_field( $_POST['_wtdqs_quicksnap_otp']['maximum_items_display'] ) : '';
+		$quicksnap_data['post_type']             = isset( $_POST['_wtdqs_quicksnap_otp']['post_type'] ) ? sanitize_text_field( wp_unslash($_POST['_wtdqs_quicksnap_otp']['post_type']) ) : '';
+		$quicksnap_data['maximum_items_display'] = isset( $_POST['_wtdqs_quicksnap_otp']['maximum_items_display'] ) ? sanitize_text_field(  wp_unslash($_POST['_wtdqs_quicksnap_otp']['maximum_items_display']) ) : '';
 		$quicksnap_data['is_thumbnail']          = isset( $_POST['_wtdqs_quicksnap_otp']['is_thumbnail'] ) ? 1 : 0;
-		$quicksnap_data['thumbnail_position']    = isset( $_POST['_wtdqs_quicksnap_otp']['thumbnail_position'] ) ? sanitize_text_field( $_POST['_wtdqs_quicksnap_otp']['thumbnail_position'] ) : '';
+		$quicksnap_data['thumbnail_position']    = isset( $_POST['_wtdqs_quicksnap_otp']['thumbnail_position'] ) ? sanitize_text_field( wp_unslash($_POST['_wtdqs_quicksnap_otp']['thumbnail_position']) ) : '';
 		$quicksnap_data['is_excerpt']            = isset( $_POST['_wtdqs_quicksnap_otp']['is_excerpt'] ) ? 1 : 0;
 
 		update_post_meta( $post_id, '_wtdqs_quicksnap_otp', $quicksnap_data );
