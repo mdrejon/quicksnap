@@ -1,0 +1,21 @@
+{
+    "name": "vendor/quicksnap",
+    "description": "quicksnap",
+    "type": "n",
+    "license": "n",
+    "autoload": {
+        "psr-4": {
+            "WTDQS_Quicksnap\\Admin\\": "Admin/",
+            "WTDQS_Quicksnap\\Includes\\": "Includes/",
+            "WTDQS_Quicksnap\\App\\": "App/"
+           
+        }
+    },
+    "require-dev": {
+        "wp-coding-standards/wpcs": "3.0"
+    },
+    "scripts": {
+        "lint": "phpcs",
+        "lint-fix": "phpcbf"
+    }
+}

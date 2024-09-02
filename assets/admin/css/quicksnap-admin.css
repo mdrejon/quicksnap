@@ -1,0 +1,38 @@
+
+
+.wtdqs-flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .wtdqs-width-50 {
+    width: calc(50% - 16px);
+  }
+
+.wtdqs-metabox-field-wrap label, .wtdqs-metabox-field-wrap span {
+    display: block;
+    line-height: 1.8;
+  }
+  .wtdqs-metabox-field-wrap label {
+    font-size: 16px; 
+    font-weight: 700;
+  }
+ 
+  .wtdqs-metabox-field-wrap { 
+    height:  calc(100% - 32px);
+    border: 1px solid #ddd;
+    margin-bottom: 16px;
+    padding: 16px;
+    border-radius: 8px;
+  }
+  .wtdqs-metabox-option {
+    padding: 16px;
+  }
+  .wtdqs-metabox-field-wrap input[type="number"], .wtdqs-metabox-field-wrap select {
+    min-width: 70%;
+    border: 1px solid #ddd;
+    padding: 4px;
+  }
+  .wtdqs-metabox-field-wrap span {
+    margin-bottom: 10px;
+  }
