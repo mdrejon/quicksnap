@@ -21,7 +21,7 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-// new WTD_Quicksnap();
+// new WTDQS_Quicksnap();
 use WTDQS_Quicksnap\Includes\Includes;
 use WTDQS_Quicksnap\Admin\Admin;
 use WTDQS_Quicksnap\App\App;
@@ -29,7 +29,7 @@ use WTDQS_Quicksnap\App\App;
 /**
  *  Main Class.
  */
-class WTDQS_Quicksnap {
+class WTDQS_Quicksnap_INIT {
 
 	/**
 	 *  Constructor.
@@ -96,4 +96,4 @@ class WTDQS_Quicksnap {
 }
 
 // Instantiate.
-new WTDQS_quicksnap();
+new WTDQS_Quicksnap_INIT();

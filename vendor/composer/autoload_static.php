@@ -9,22 +9,22 @@ class ComposerStaticInit5128285fc141787be41dafc4e9d96028
     public static $prefixLengthsPsr4 = array (
         'W' => 
         array (
-            'WTD_Quicksnap\\Includes\\' => 23,
-            'WTD_Quicksnap\\App\\' => 18,
-            'WTD_Quicksnap\\Admin\\' => 20,
+            'WTDQS_Quicksnap\\Includes\\' => 25,
+            'WTDQS_Quicksnap\\App\\' => 20,
+            'WTDQS_Quicksnap\\Admin\\' => 22,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'WTD_Quicksnap\\Includes\\' => 
+        'WTDQS_Quicksnap\\Includes\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Includes',
         ),
-        'WTD_Quicksnap\\App\\' => 
+        'WTDQS_Quicksnap\\App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/App',
         ),
-        'WTD_Quicksnap\\Admin\\' => 
+        'WTDQS_Quicksnap\\Admin\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Admin',
         ),

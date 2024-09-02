@@ -6,7 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'WTD_Quicksnap\\Includes\\' => array($baseDir . '/Includes'),
-    'WTD_Quicksnap\\App\\' => array($baseDir . '/App'),
-    'WTD_Quicksnap\\Admin\\' => array($baseDir . '/Admin'),
+    'WTDQS_Quicksnap\\Includes\\' => array($baseDir . '/Includes'),
+    'WTDQS_Quicksnap\\App\\' => array($baseDir . '/App'),
+    'WTDQS_Quicksnap\\Admin\\' => array($baseDir . '/Admin'),
 );

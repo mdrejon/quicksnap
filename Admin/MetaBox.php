@@ -38,7 +38,7 @@ class MetaBox {
 
 		add_meta_box(
 			'wtdqs_quicksnap_meta_shortcode_box',
-			__( 'quicksnap', 'quicksnap' ),
+			__( 'Quicksnap', 'quicksnap' ),
 			array( $this, 'wtdqs_quicksnap_meta_shortcode_box_callback' ),
 			'wtdqs-quicksnap',
 			'side',
@@ -47,7 +47,7 @@ class MetaBox {
 
 		add_meta_box(
 			'wtdqs_quicksnap_meta_option_box',
-			__( 'quicksnap', 'quicksnap' ),
+			__( 'Quicksnap', 'quicksnap' ),
 			array( $this, 'wtdqs_quicksnap_meta_option_box_callback' ),
 			'wtdqs-quicksnap',
 			'normal',
@@ -61,7 +61,7 @@ class MetaBox {
 	public function wtdqs_quicksnap_meta_shortcode_box_callback() {
 		$post_id = get_the_ID();
 		if ( '' != $post_id ) {
-			echo '<input type="text" id="wtdqs_quicksnap_shortcode" name="wtdqs_quicksnap_shortcode" value="[quicksnap id=' . esc_attr( $post_id ) . ']" readonly>';
+			echo '<input type="text" id="wtdqs_quicksnap_shortcode" name="wtdqs_quicksnap_shortcode" value="[wtdqs_quicksnap id=' . esc_attr( $post_id ) . ']" readonly>';
 		} else {
 			echo '<input type="text" id="wtdqs_quicksnap_shortcode" name="wtdqs_quicksnap_shortcode" value="" readonly>';
 		}

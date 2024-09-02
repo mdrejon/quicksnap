@@ -1,5 +1,5 @@
 <?php
-namespace WTD_Quicksnap\App;
+namespace WTDQS_Quicksnap\App;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
@@ -44,12 +44,12 @@ class Shortcode {
 	public function wtdqs_quicksnap_shortcode_scripts() {
 
 		// Enqueue Styles.
-		if ( ! wp_style_is( 'quicksnap-app-stypes', 'enqueued' ) ) {
-			wp_enqueue_style( 'quicksnap-app-stypes' );
+		if ( ! wp_style_is( 'wtdqs-app-stypes', 'enqueued' ) ) {
+			wp_enqueue_style( 'wtdqs-app-stypes' );
 		}
 		// Enqueue Scripts.
-		if ( ! wp_script_is( 'quicksnap-app-script', 'enqueued' ) ) {
-			wp_enqueue_script( 'quicksnap-app-script' );
+		if ( ! wp_script_is( 'wtdqs-app-script', 'enqueued' ) ) {
+			wp_enqueue_script( 'wtdqs-app-script' );
 		}
 	}
 
@@ -106,7 +106,7 @@ class Shortcode {
 				$excerpt   = $meta['is_excerpt'] ? apply_filters( 'the_excerpt', $excerpt ) : '';
 
 				$thumbnail = get_the_post_thumbnail_url( get_the_ID(), 'thumbnail' );
-				$thumbnail = ! empty( $thumbnail ) ? $thumbnail : 
+				$thumbnail = ! empty( $thumbnail ) ? $thumbnail : WTDQS_QUICKSNAP_URL . 'assets/app/img/placeholder-150.png';
 				$thumbnail = apply_filters( 'wtdqs_quicksnap_thumbnail', $thumbnail, get_the_ID() );
 				$thumbnail = $meta['is_thumbnail'] ? '<div class="thumbnail"> <img src="' . esc_url( $thumbnail ) . '" alt="">  </div>' : '';
 
@@ -134,7 +134,7 @@ class Shortcode {
 	public function wtdqs_quicksnap_shortcode_ajax_callback() {
 
 		// Check Nonce. quicksnap_nonce 
-		if( !isset($_POST['quicksnapNonce']) && !wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['quicksnapNonce'] ) ), 'quicksnap_nonce' ) ){
+		if( !isset($_POST['quicksnapNonce']) && !wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['quicksnapNonce'] ) ), 'wtdqs_quicksnap_nonce' ) ){
 			wp_send_json_error( 'Nonce Verification Failed' );
 			wp_die();
 		}
@@ -198,30 +198,7 @@ class Shortcode {
 				<!-- <input type="submit" value="Search">  -->
 			</div>
 			<div class="wtdqs-search-result">
-				<ul>
-					<li>
-						<a href="#">
-							<div class="thumbnail">
-								<img src="https://via.placeholder.com/150" alt="">
-							</div>
-							<div class="content">
-								<h3>Title</h3>
-								<p>Excerpt</p>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<div class="thumbnail">
-								<img src="https://via.placeholder.com/150" alt="">
-							</div>
-							<div class="content">
-								<h3>Title</h3>
-								<p>Excerpt</p>
-							</div>
-						</a>
-					</li>
-				</ul>
+				 
 			</div>
 		</div>
 		<?php

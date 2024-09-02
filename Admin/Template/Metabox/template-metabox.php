@@ -1,4 +1,5 @@
 <?php
+    if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 /**
  * Template for the Metabox.
  */
@@ -20,13 +21,13 @@ $is_excerpt            = isset( $data['is_excerpt'] ) ? $data['is_excerpt'] : ''
 wp_nonce_field( 'wtdqs_quicksnap', 'wtdqs_quicksnap_nonce' );
 
 ?>
-<div class="wtdqssf-metabox-option"> 
-	<div class="wtdqssf-metabox-header">
-		<h3><?php echo esc_html( __( 'quicksnap Options', 'quicksnap' ) ); ?></h3>
+<div class="wtdqs-metabox-option"> 
+	<div class="wtdqs-metabox-header">
+		<h3><?php echo esc_html( __( 'Quicksnap Options', 'quicksnap' ) ); ?></h3>
 	</div>
-	<div class="wtdqssf-flexbox">
+	<div class="wtdqs-flexbox">
 		
-		<div class="wtdqs-metabox-field wtdqssf-width-50">
+		<div class="wtdqs-metabox-field wtdqs-width-50">
 			<div class="wtdqs-metabox-field-wrap">
 				<label for="_wtdqs_quicksnap_otp[post_type]"><?php echo esc_html( __( 'Select Post Type', 'quicksnap' ) ); ?></label>
 				<span><?php echo esc_html( __( 'Select Post Type', 'quicksnap' ) ); ?></span>
@@ -42,7 +43,7 @@ wp_nonce_field( 'wtdqs_quicksnap', 'wtdqs_quicksnap_nonce' );
 			
 		</div>
 
-		<div class="wtdqs-metabox-field  wtdqssf-width-50">
+		<div class="wtdqs-metabox-field  wtdqs-width-50">
 			<div class="wtdqs-metabox-field-wrap">
 				<label for="_wtdqs_quicksnap_otp[maximum_items_display]"><?php echo esc_html( __( 'Maximum Items Search Result', 'quicksnap' ) ); ?></label>
 				<span><?php echo esc_html( __( 'Type Maximum Items To Dysplay', 'quicksnap' ) ); ?></span>
@@ -51,7 +52,7 @@ wp_nonce_field( 'wtdqs_quicksnap', 'wtdqs_quicksnap_nonce' );
 		   
 		</div>
 
-		<div class="wtdqs-metabox-field  wtdqssf-width-50">
+		<div class="wtdqs-metabox-field  wtdqs-width-50">
 			<div class="wtdqs-metabox-field-wrap">
 				<label for="_wtdqs_quicksnap_otp[is_thumbnail]"><?php echo esc_html( __( 'Show Thumbnail', 'quicksnap' ) ); ?></label>
 				<span><?php echo esc_html( __( 'Enable Thumbnail', 'quicksnap' ) ); ?></span>
@@ -59,7 +60,7 @@ wp_nonce_field( 'wtdqs_quicksnap', 'wtdqs_quicksnap_nonce' );
 			</div>
 			
 		</div>
-		<div class="wtdqs-metabox-field  wtdqssf-width-50">
+		<div class="wtdqs-metabox-field  wtdqs-width-50">
 			<div class="wtdqs-metabox-field-wrap">
 				<label for="_wtdqs_quicksnap_otp[thumbnail_position]"><?php echo esc_html( __( 'Thumbnail Position', 'quicksnap' ) ); ?></label>
 				<span><?php echo esc_html( __( 'Select Thumbnail Position', 'quicksnap' ) ); ?></span>
@@ -73,7 +74,7 @@ wp_nonce_field( 'wtdqs_quicksnap', 'wtdqs_quicksnap_nonce' );
 			</div>
 			
 		</div>
-		<div class="wtdqs-metabox-field  wtdqssf-width-50">
+		<div class="wtdqs-metabox-field  wtdqs-width-50">
 			<div class="wtdqs-metabox-field-wrap">
 				<label for="_wtdqs_quicksnap_otp[is_excerpt]"><?php echo esc_html( __( 'Show Excerpt', 'quicksnap' ) ); ?></label>
 				<span><?php echo esc_html( __( 'Enable Excerpt', 'quicksnap' ) ); ?></span>

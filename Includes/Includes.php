@@ -1,6 +1,6 @@
 <?php
 
-namespace WTD_Quicksnap\Includes;
+namespace WTDQS_Quicksnap\Includes;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
@@ -8,7 +8,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 // Use PostType.
-use WTD_Quicksnap\Includes\Post_Type;
+use WTDQS_Quicksnap\Includes\Post_Type;
 
 /** 
 * Includes.

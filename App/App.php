@@ -1,5 +1,5 @@
 <?php
-namespace WTD_Quicksnap\App;
+namespace WTDQS_Quicksnap\App;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
@@ -7,7 +7,7 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 // Use
-use WTD_Quicksnap\App\Shortcode;
+use WTDQS_Quicksnap\App\Shortcode;
 
 /**
  * App Class.
@@ -44,15 +44,15 @@ class App {
 	 */
 	public function wtdqs_quicksnap_public_scripts() {
 
-		wp_register_style( 'quicksnap-app-stypes', WTDQS_QUICKSNAP_URL . 'assets/app/css/quicksnap-app.css', array(), WTDQS_QUICKSNAP_VERSION, 'all' );
-		wp_register_script( 'quicksnap-app-script', WTDQS_QUICKSNAP_URL . 'assets/app/js/quicksnap-app.js', array( 'jquery' ), WTDQS_QUICKSNAP_VERSION, true );
+		wp_register_style( 'wtdqs-app-stypes', WTDQS_QUICKSNAP_URL . 'assets/app/css/quicksnap-app.css', array(), WTDQS_QUICKSNAP_VERSION, 'all' );
+		wp_register_script( 'wtdqs-app-script', WTDQS_QUICKSNAP_URL . 'assets/app/js/quicksnap-app.js', array( 'jquery' ), WTDQS_QUICKSNAP_VERSION, true );
 
 		wp_localize_script(
-			'quicksnap-app-script',
-			'quicksnap_ajax',
+			'wtdqs-app-script',
+			'wtdqs_ajax',
 			array(
-				'quicksnap_ajax_url' => admin_url( 'admin-ajax.php' ),
-				'quicksnap_nonce'    => wp_create_nonce( 'quicksnap_nonce' ),
+				'wtdqs_ajax_url' => admin_url( 'admin-ajax.php' ),
+				'wtdqs_nonce'    => wp_create_nonce( 'wtdqs_quicksnap_nonce' ),
 			)
 		);
 	}

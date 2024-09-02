@@ -1,6 +1,6 @@
 <?php
 
-namespace WTD_Quicksnap\Includes;
+namespace WTDQS_Quicksnap\Includes;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
