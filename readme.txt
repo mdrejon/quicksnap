@@ -8,7 +8,7 @@ Stable tag: 1.0.1
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt 
 
-Quicksnap is a powerful and versatile search plugin designed to enhance your WordPress site’s search functionality. Whether you’re running a WooCommerce store, a blog, or a content-rich site, Quicksnap makes finding content easier and faster for your visitors.
+Quicksnap boosts your WordPress site's search, making it faster and easier for users to find content, ideal for WooCommerce, blogs, and content-rich sites.
 
 == Changelog ==
 
@@ -19,3 +19,7 @@ Quicksnap is a powerful and versatile search plugin designed to enhance your Wor
 = 1.0.1 - 02/09/2024 =
 
 - Review update
+
+= 1.0.2 - 02/09/2024 =
+
+- Stable realese
