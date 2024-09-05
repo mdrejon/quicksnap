@@ -17,5 +17,8 @@
     "scripts": {
         "lint": "phpcs",
         "lint-fix": "phpcbf"
+    },
+    "require": {
+        "appsero/client": "^2.0"
     }
 }

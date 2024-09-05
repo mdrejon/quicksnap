@@ -9,4 +9,6 @@ return array(
     'WTDQS_Quicksnap\\Includes\\' => array($baseDir . '/Includes'),
     'WTDQS_Quicksnap\\App\\' => array($baseDir . '/App'),
     'WTDQS_Quicksnap\\Admin\\' => array($baseDir . '/Admin'),
+    'PHPCSStandards\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\' => array($vendorDir . '/dealerdirect/phpcodesniffer-composer-installer/src'),
+    'Appsero\\' => array($vendorDir . '/appsero/client/src'),
 );
