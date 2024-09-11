@@ -60,11 +60,14 @@ class MetaBox {
 	 */
 	public function wtdqs_quicksnap_meta_shortcode_box_callback() {
 		$post_id = get_the_ID();
+		echo '<div class="wtdqs-quicksnap-shortcode-wrap">'; 
 		if ( '' != $post_id ) {
-			echo '<input type="text" id="wtdqs_quicksnap_shortcode" name="wtdqs_quicksnap_shortcode" value="[wtdqs_quicksnap id=' . esc_attr( $post_id ) . ']" readonly>';
+			echo '<input type="text" class="wtdqs-quicksnap-shortcode" name="wtdqs-quicksnap-shortcode" value="[wtdqs_quicksnap id=' . esc_attr( $post_id ) . ']" readonly>';
 		} else {
-			echo '<input type="text" id="wtdqs_quicksnap_shortcode" name="wtdqs_quicksnap_shortcode" value="" readonly>';
-		}
+			echo '<input type="text" class="wtdqs-quicksnap-shortcode" name="wtdqs-quicksnap-shortcode" value="" readonly>';
+		} 
+		echo '<a href="#" class="wtdqs-quicksnap-shortcode-btn button">Copy</a>';
+		echo '</div>';
 	}
 
 	/**
@@ -82,6 +85,7 @@ class MetaBox {
 			)
 		);
 	}
+	
 
 	/**
 	 *  Save Meta Box.
@@ -110,6 +114,7 @@ class MetaBox {
 		$quicksnap_data['is_thumbnail']          = isset( $_POST['_wtdqs_quicksnap_otp']['is_thumbnail'] ) ? 1 : 0;
 		$quicksnap_data['thumbnail_position']    = isset( $_POST['_wtdqs_quicksnap_otp']['thumbnail_position'] ) ? sanitize_text_field( wp_unslash($_POST['_wtdqs_quicksnap_otp']['thumbnail_position']) ) : '';
 		$quicksnap_data['is_excerpt']            = isset( $_POST['_wtdqs_quicksnap_otp']['is_excerpt'] ) ? 1 : 0;
+		$quicksnap_data['custom_css']            = isset( $_POST['_wtdqs_quicksnap_otp']['custom_css'] ) ? wp_kses_post( wp_unslash($_POST['_wtdqs_quicksnap_otp']['custom_css']) ) : '';
 
 		update_post_meta( $post_id, '_wtdqs_quicksnap_otp', $quicksnap_data );
 	}

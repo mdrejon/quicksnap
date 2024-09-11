@@ -22,6 +22,13 @@ class Post_Type {
 
 		// Register Post Type.
 		add_action( 'init', array( $this, 'wtdqs_Quicksnap_post_type' ) );
+
+		// Add Custom Columns.
+		add_filter( 'manage_wtdqs-quicksnap_posts_columns', array( $this, 'wtdqs_quicksnap_columns' ) );
+
+		// add shortcode column data.
+		add_action( 'manage_wtdqs-quicksnap_posts_custom_column', array( $this, 'wtdqs_quicksnap_columns_data' ), 10, 2 );
+
 	}
 
 	/**
@@ -73,4 +80,35 @@ class Post_Type {
 
 		register_post_type( 'wtdqs-quicksnap', $args );
 	}
+
+	/**
+	 * Add Custom Columns.
+	 */
+	public function wtdqs_quicksnap_columns( $columns ) {
+		$columns = array(
+			'cb'        => '<input type="checkbox" />',
+			'title'     => __( 'Title', 'quicksnap' ),
+			'shortcode' => __( 'ShortCode', 'quicksnap' ),
+			'date'      => __( 'Date', 'quicksnap' ),
+		);
+
+		return $columns;
+	}
+
+	/**
+	 * Add Custom Columns Data.
+	 */
+	public function wtdqs_quicksnap_columns_data( $column, $post_id ) {
+		switch ( $column ) {
+			case 'shortcode':
+				echo '<div class="wtdqs-quicksnap-shortcode-wrap">';
+				echo '<input type="text" class="wtdqs-quicksnap-shortcode" name="wtdqs_quicksnap_shortcode" value="[wtdqs_quicksnap id=' . esc_attr( $post_id ) . ']" readonly>';
+				// add copy to clipboard. btn
+				echo '<a href="#" class="wtdqs-quicksnap-shortcode-btn button">Copy</a>';
+				echo '</div>';
+				break;
+		}
+	}
+
+	
 }

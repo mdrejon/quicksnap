@@ -188,14 +188,22 @@ class Shortcode {
 
 		// Enqueue app Scripts.
 		$this->wtdqs_quicksnap_shortcode_scripts();
+		 
+
+		$custom_css = isset( $meta['custom_css'] ) ? $meta['custom_css'] : '';
+
 
 		ob_start();
+		
 		?>
+		<style>
+			<?php echo wp_kses_post($custom_css); ?>
+		</style>
 		<div id="wtdqs-quicksnap-<?php echo esc_attr( $this->post_id ); ?>" data-id="<?php echo esc_attr( $this->post_id ); ?>"  class="wtdqs-quicksnap <?php echo esc_attr( $class ); ?>" >
 			<div class="search_box">
 			
 				<input class="wtdqs-search-field" type="text" id="wtdqs-search-field-<?php echo esc_attr( $this->post_id ); ?>" name="wtdqs-search-field" placeholder="Search">
-				<!-- <input type="submit" value="Search">  -->
+			 
 			</div>
 			<div class="wtdqs-search-result">
 				 

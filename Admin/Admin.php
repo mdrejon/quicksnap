@@ -47,6 +47,16 @@ class Admin {
 	public function wtdqs_quicksnap_admin_scripts() {
 		wp_enqueue_style( 'wtdqs-quicksnap-admin-stypes', WTDQS_QUICKSNAP_URL . 'assets/admin/css/quicksnap-admin.css', array(), WTDQS_QUICKSNAP_VERSION, 'all' );
 		wp_enqueue_script( 'wtdqs-quicksnap-admin-script', WTDQS_QUICKSNAP_URL . 'assets/admin/js/quicksnap-admin.js', array( 'jquery' ), WTDQS_QUICKSNAP_VERSION, true );
+ 
+		
+		// $settings = wp_enqueue_code_editor(array('type' => 'text/css'));
+		// wp_add_inline_script(
+		// 	'wtdqs-quicksnap-admin-script',
+		// 	sprintf('jQuery(function($) { wp.codeEditor.initialize($("#wtdqs_quicksnap_otp_custom_css"), %s); });', wp_json_encode($settings))
+		// );
+		// Localize the script with new data.
+
+		wp_enqueue_code_editor( array( 'type' => 'text/html' ) ); 
 	}
 
 	/**
