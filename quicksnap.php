@@ -5,7 +5,7 @@
  * Plugin Name: Quicksnap
  * Plugin URI:  https://github.com/mdrejon/quicksnap
  * Description: Quicksnap is a plugin that allows you to search for posts and pages in the WordPress admin area.
- * Version:     1.0.3
+ * Version:     1.0.4
  * Author:      Sydur Rahman
  * Author URI:  https://github.com/mdrejon/
  * License:     GPLv2 or later
@@ -13,7 +13,7 @@
  * Text Domain: quicksnap
  * Domain Path: /languages
  * Requires at least: 4.9
- * Requires PHP: 5.2.4
+ * Requires PHP: 7.2
  */
 
 // If this file is called directly, abort.
