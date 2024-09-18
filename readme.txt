@@ -4,7 +4,7 @@ Tags: Ajax search, WooCommerce product search, Custom post type search integrati
 Requires at least: 4.9
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 License: GPL-2.0+
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt 
 
@@ -90,3 +90,7 @@ Boost your site’s usability and offer a seamless content discovery experience 
 = 1.0.5 - 14/09/2024 =
 
 - Improved      : readme.txt file & Screenshot
+
+= 1.0.6 - 18/09/2024 =
+
+- Improved      : resolved vulnerable issue
