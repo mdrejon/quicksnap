@@ -191,6 +191,7 @@ class Shortcode {
 		 
 
 		$custom_css = isset( $meta['custom_css'] ) ? $meta['custom_css'] : '';
+		$search_bar_width = isset( $meta['search_bar_width'] ) ? esc_html($meta['search_bar_width']) : '400px';
 
 
 		ob_start();
@@ -199,9 +200,9 @@ class Shortcode {
 		<style>
 			<?php echo wp_kses_post($custom_css); ?>
 		</style>
-		<div id="wtdqs-quicksnap-<?php echo esc_attr( $this->post_id ); ?>" data-id="<?php echo esc_attr( $this->post_id ); ?>"  class="wtdqs-quicksnap <?php echo esc_attr( $class ); ?>" >
-			<div class="search_box">
-			
+		<div style="width: <?php echo esc_attr($search_bar_width); ?>" id="wtdqs-quicksnap-<?php echo esc_attr( $this->post_id ); ?>" data-id="<?php echo esc_attr( $this->post_id ); ?>"  class="wtdqs-quicksnap <?php echo esc_attr( $class ); ?>" >
+			<div class="wtdqs-search_box">
+				<span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
 				<input class="wtdqs-search-field" type="text" id="wtdqs-search-field-<?php echo esc_attr( $this->post_id ); ?>" name="wtdqs-search-field" placeholder="Search">
 			 
 			</div>

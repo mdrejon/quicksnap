@@ -112,7 +112,7 @@
 .wtdqs-metabox-field-wrap select {
   min-width: 70%;
   border: 1px solid #ddd;
-  padding: 4px;
+  padding: 4px 8px;
 }
 
 .wtdqs-metabox-field-wrap span {
