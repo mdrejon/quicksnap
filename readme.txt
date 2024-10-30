@@ -2,7 +2,7 @@
 Contributors: mdrejon
 Tags: Ajax search, WooCommerce product search, Custom post type search integration,  WordPress shortcode search solution, Customizable WordPress search
 Requires at least: 4.9
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 7.4
 Stable tag: 1.0.6
 License: GPL-2.0+
@@ -94,3 +94,9 @@ Boost your site’s usability and offer a seamless content discovery experience 
 = 1.0.6 - 18/09/2024 =
 
 - Improved      : resolved vulnerable issue
+
+
+= 1.0.7 - 18/09/2024 =
+
+- New Feature   : Search bar width option Added
+- Improved      : Search style updated
