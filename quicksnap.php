@@ -40,6 +40,10 @@ class WTDQS_Quicksnap_INIT {
 			require_once plugin_dir_path( __FILE__ ) . 'vendor/autoload.php';
 		}
 
+		if ( file_exists( plugin_dir_path( __FILE__ ) . 'Includes/functions.php' ) ) {
+			require_once plugin_dir_path( __FILE__ ) . 'Includes/functions.php';
+		}
+
 		// Constants.
 		$this->wtdqs_quicksnap_constant();
 

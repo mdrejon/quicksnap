@@ -7,7 +7,8 @@
         "psr-4": {
             "WTDQS_Quicksnap\\Admin\\": "Admin/",
             "WTDQS_Quicksnap\\Includes\\": "Includes/",
-            "WTDQS_Quicksnap\\App\\": "App/"
+            "WTDQS_Quicksnap\\App\\": "App/",
+            "WTDQS_Quicksnap\\Admin\\Options\\": "Options/"
            
         }
     },
@@ -20,5 +21,10 @@
     },
     "require": {
         "appsero/client": "^2.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }

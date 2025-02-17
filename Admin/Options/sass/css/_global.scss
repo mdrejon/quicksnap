@@ -1,0 +1,91 @@
+
+
+#wtdqs_quicksnap_meta_option_box {
+    margin: 0 !important;
+    .inside {
+        margin: 0;
+        padding: 0 !important;
+        }
+
+        
+    //   Global
+    a{
+        text-decoration: none;
+        color: $text_primary;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    p{
+        margin: 4px 0;
+        padding: 0;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px
+    }
+    h1, h2, h3, h4, h5, h6{
+        margin: 0 !important;
+        padding: 0;
+    }
+    h1{
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+    }
+  } 
+
+ 
+
+
+
+.wtdqs-metabox-option{
+    padding: $padding_medium;
+    @include tfhb_flexbox( row, start, start, wrap, 16px);
+
+    .wtdqs-metabox-sidebar {
+        width: 250px;  
+        ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li{ 
+               a{
+                    @include tfhb_flexbox(row, start, center, wrap, 8px);
+                    padding: $padding_medium_small $padding_medium;  
+                    border-radius: $border_radius_small;
+                    color: $text_primary;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    list-style: none; 
+                    &:hover, &:focus, &.active{
+                        background-color: $hover_bg_color;
+                        box-shadow: none;
+                        outline: none;
+                    }
+
+               }
+            }
+        }
+    }
+
+    .wtdqs-metabox-content {
+        width: calc(100% - 300px);
+        padding-left: $padding_medium;
+        
+        border-left: 1px solid var(--Border, #C0D8C4);
+        .wtdqs-metabox-content-wrap{
+            .wtdqs-tabs-item{ 
+                display: none;
+                &.active{
+                    @include tfhb_flexbox(column, start, start, wrap, 16px);
+                }
+                
+            }
+        }
+
+    }
+}

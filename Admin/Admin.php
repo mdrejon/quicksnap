@@ -20,12 +20,16 @@ class Admin {
 	 *  Constructor.
 	 */
 	public function __construct() {
-
-		// Meta Box.
-		MetaBox::init();
+ 
+		
 
 		// Enqueue Admin Scripts.
 		add_action( 'admin_enqueue_scripts', array( $this, 'wtdqs_quicksnap_admin_scripts' ) );
+
+		// Load MetaBox.
+		if(file_exists(WTDQS_QUICKSNAP_PATH . 'Admin/MetaBox.php')){
+			require_once WTDQS_QUICKSNAP_PATH . 'Admin/MetaBox.php';
+		}
 
 		// Initialize the plugin tracker
 		$this->wtdqs_appsero_init_tracker_quicksnap();
@@ -45,8 +49,8 @@ class Admin {
 	 *  Enqueue Admin Scripts.
 	 */
 	public function wtdqs_quicksnap_admin_scripts() {
-		wp_enqueue_style( 'wtdqs-quicksnap-admin-stypes', WTDQS_QUICKSNAP_URL . 'assets/admin/css/quicksnap-admin.css', array(), WTDQS_QUICKSNAP_VERSION, 'all' );
-		wp_enqueue_script( 'wtdqs-quicksnap-admin-script', WTDQS_QUICKSNAP_URL . 'assets/admin/js/quicksnap-admin.js', array( 'jquery' ), WTDQS_QUICKSNAP_VERSION, true );
+		// wp_enqueue_style( 'wtdqs-quicksnap-admin-stypes', WTDQS_QUICKSNAP_URL . 'assets/admin/css/quicksnap-admin.css', array(), WTDQS_QUICKSNAP_VERSION, 'all' );
+		// wp_enqueue_script( 'wtdqs-quicksnap-admin-script', WTDQS_QUICKSNAP_URL . 'assets/admin/js/quicksnap-admin.js', array( 'jquery' ), WTDQS_QUICKSNAP_VERSION, true );
  
 		
 		// $settings = wp_enqueue_code_editor(array('type' => 'text/css'));
@@ -55,8 +59,7 @@ class Admin {
 		// 	sprintf('jQuery(function($) { wp.codeEditor.initialize($("#wtdqs_quicksnap_otp_custom_css"), %s); });', wp_json_encode($settings))
 		// );
 		// Localize the script with new data.
-
-		wp_enqueue_code_editor( array( 'type' => 'text/html' ) ); 
+ 
 	}
 
 	/**
