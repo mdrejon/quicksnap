@@ -24,7 +24,7 @@ if ( ! defined( 'WPINC' ) ) {
 // new WTDQS_Quicksnap();
 use WTDQS_Quicksnap\Includes\Includes;
 use WTDQS_Quicksnap\Admin\Admin;
-use WTDQS_Quicksnap\App\App;
+use WTDQS_Quicksnap\App\App; 
 
 /**
  *  Main Class.
